@@ -35,8 +35,8 @@ owasp_security_testing-training-sparsh/
 
 **OWASP Category:** A01 – Broken Access Control
 
-![alt text](1a.png)
-![alt text](1a-1.png)
+![alt text](screenshots/1a.png)
+![alt text](screenshots/1a-1.png)
 
 ---
 
@@ -56,9 +56,9 @@ owasp_security_testing-training-sparsh/
 
 **OWASP Categories:** A03 – Injection, A01 – Broken Access Control
 
-![alt text](<1b Admin Access.png>)
-![alt text](<1b Adminstration Section.png>)
-![alt text](<1b 5StarDeleted.png>)
+![alt text](screenshots/1b Admin Access.png)
+![alt text](screenshots/1b Adminstration Section.png)
+![alt text](screenshots/1b 5StarDeleted.png)
 
 ---
 
@@ -93,7 +93,7 @@ Date: Thu, 14 May 2026 06:04:56 GMT
 
 **Root Cause:** Partial and inconsistent application of the `helmet` middleware in the Express.js configuration. Some headers have been added individually (suggesting ad-hoc security additions over time) while the full helmet configuration was never enforced. The deprecated `Feature-Policy` header indicates the security configuration has not been reviewed or updated to align with current browser standards.
 
-![alt text](<2a Security Headers.png>)
+![alt text](screenshots/2a Security Headers.png)
 
 ---
 
@@ -131,8 +131,8 @@ Navigated to `http://localhost:3000/encryptionkeys`, a directory listing was ret
 
 **Root Cause:** The web server serves both directories without authentication, access restriction, or directory listing disabled. There is no route protection equivalent to `.htaccess`, and sensitive files were placed in web-accessible directories during development and never removed or secured before deployment.
 
-![alt text](encryption.png)
-![alt text](ftp.png)
+![alt text](screenshots/encryption.png)
+![alt text](screenshots/ftp.png)
 
 ---
 
@@ -154,7 +154,7 @@ Navigated to `http://localhost:3000/encryptionkeys`, a directory listing was ret
 
 **Root Cause:** Dependency versions were pinned at time of initial development and never updated. No automated supply chain scanning (e.g., `npm audit`, Dependabot, Snyk) is integrated into the CI/CD pipeline.
 
-![alt text](image.png)
+![alt text](screenshots/image.png)
 
 ---
 
@@ -169,7 +169,7 @@ Navigated to `http://localhost:3000/encryptionkeys`, a directory listing was ret
 
 **Root Cause:** The CAPTCHA was designed as a UI friction control, not a server-side rate limiting mechanism. The API has no throttling, no per-session submission limits, and no detection of automated captcha-solving behaviour. This is an insecure design flaw, the security assumption (that a human must solve the CAPTCHA) was never enforced at the layer that actually processes the requests.
 
-![alt text](image-1.png)
+![alt text](screenshots/image-1.png)
 ---
 
 #### 4b. Place a Free / Money-Making Order (Negative Quantity)
@@ -181,8 +181,8 @@ Navigated to `http://localhost:3000/encryptionkeys`, a directory listing was ret
 **Root Cause:** The API does not validate that quantity is a positive integer. Input validation was not designed into the order management domain model — the system trusts any integer value from the client without boundary enforcement.
 
 **OWASP Category:** A04 – Insecure Design
-![alt text](negativeQuantityBurp.png)
-![alt text](negativeQuantity.png)
+![alt text](screenshots/negativeQuantityBurp.png)
+![alt text](screenshots/negativeQuantity.png)
 ---
 
 ## Conceptual Questions
