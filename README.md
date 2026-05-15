@@ -1,10 +1,5 @@
 # OWASP Top 10 – Hands-On Vulnerability Awareness
 ### Day 1 Assignment | Security Testing Learning Series
-**Author:** Sparsh Bhardwaj  
-**Repository:** `owasp_security_testing-training-sparsh`  
-**Subfolder:** `day1-owasp-workshop`  
-**Target Application:** OWASP Juice Shop (local instance)  
-**Tools Used:** Burp Suite, Browser DevTools, Browser Console (JavaScript), Postman, OWASP Juice Shop
 
 ---
 
